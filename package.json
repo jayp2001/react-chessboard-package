@@ -1,12 +1,17 @@
 {
-  "name": "react-chessboard",
-  "version": "0.0.0-semantically-released",
+  "name": "dca_board",
+  "version": "0.0.1",
   "description": "The React Chessboard Library",
-  "author": "Ryan Gregory <ryangregory.dev@outlook.com>",
+  "homepage": "https://github.com/jayp2001/react-chessboard-package#readme",
+  "bugs": {
+    "url": "https://github.com/jayp2001/react-chessboard-package/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayp2001/react-chessboard-package.git"
+  },
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "author": "Jay Parmar",
   "type": "module",
   "exports": {
     ".": {
@@ -15,22 +20,14 @@
       "require": "./dist/index.js"
     }
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "doc": "docs"
+  },
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@9.4.0",
-  "engines": {
-    "node": ">=20.11.0",
-    "pnpm": ">=9.4.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Clariity/react-chessboard.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Clariity/react-chessboard/issues"
-  },
-  "homepage": "https://github.com/Clariity/react-chessboard#readme",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "test:static": "tsc && eslint src docs && prettier --check src docs",
@@ -86,5 +83,11 @@
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  }
+  },
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=9.4.0"
+  },
+  "module": "dist/index.esm.js",
+  "packageManager": "pnpm@9.4.0"
 }
