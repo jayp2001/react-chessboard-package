@@ -63,6 +63,12 @@ export const defaultDraggingPieceGhostStyle: React.CSSProperties = {
   opacity: 0.5,
 };
 
+export const defaultSelectedSparePieceStyle: React.CSSProperties = {
+  border: '2px solid #4a90d9',
+  borderRadius: '4px',
+  backgroundColor: 'rgba(74, 144, 217, 0.15)',
+};
+
 export const defaultArrowOptions = {
   color: '#ffaa00', // color if no modifiers are held down when drawing an arrow
   secondaryColor: '#4caf50', // color if shift is held down when drawing an arrow

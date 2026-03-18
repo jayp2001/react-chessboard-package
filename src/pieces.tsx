@@ -4,8 +4,11 @@
 
 import { PieceRenderObject } from './types.js';
 
-export const defaultPieces: PieceRenderObject = {
-  wP: (props) => (
+export const WhitePawn = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -31,8 +34,13 @@ export const defaultPieces: PieceRenderObject = {
         }}
       />
     </svg>
-  ),
-  wR: (props) => (
+);
+
+export const WhiteRook = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -80,8 +88,13 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
-  wN: (props) => (
+);
+
+export const WhiteKnight = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -124,8 +137,13 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
-  wB: (props) => (
+);
+
+export const WhiteBishop = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -166,8 +184,13 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
-  wQ: (props) => (
+);
+
+export const WhiteQueen = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -198,8 +221,13 @@ export const defaultPieces: PieceRenderObject = {
         <circle cx="39" cy="12" r="2" />
       </g>
     </svg>
-  ),
-  wK: (props) => (
+);
+
+export const WhiteKing = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -257,8 +285,13 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
-  bP: (props) => (
+);
+
+export const BlackPawn = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -284,8 +317,13 @@ export const defaultPieces: PieceRenderObject = {
         }}
       />
     </svg>
-  ),
-  bR: (props) => (
+);
+
+export const BlackRook = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -380,8 +418,13 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
-  bN: (props) => (
+);
+
+export const BlackKnight = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -428,8 +471,13 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
-  bB: (props) => (
+);
+
+export const BlackBishop = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -470,8 +518,13 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
-  bQ: (props) => (
+);
+
+export const BlackQueen = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -513,8 +566,13 @@ export const defaultPieces: PieceRenderObject = {
         </g>
       </g>
     </svg>
-  ),
-  bK: (props) => (
+);
+
+export const BlackKing = (props?: {
+  fill?: string;
+  square?: string;
+  svgStyle?: React.CSSProperties;
+}) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -569,5 +627,19 @@ export const defaultPieces: PieceRenderObject = {
         />
       </g>
     </svg>
-  ),
+);
+
+export const defaultPieces: PieceRenderObject = {
+  wP: WhitePawn,
+  wR: WhiteRook,
+  wN: WhiteKnight,
+  wB: WhiteBishop,
+  wQ: WhiteQueen,
+  wK: WhiteKing,
+  bP: BlackPawn,
+  bR: BlackRook,
+  bN: BlackKnight,
+  bB: BlackBishop,
+  bQ: BlackQueen,
+  bK: BlackKing,
 };

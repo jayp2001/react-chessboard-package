@@ -8,6 +8,7 @@ import * as PlayVsRandomStories from './stories/basic-examples/PlayVsRandom.stor
 import * as SparePiecesStories from './stories/basic-examples/SparePieces.stories';
 import * as ClickToMoveStories from './stories/basic-examples/ClickToMove.stories';
 import * as ClickOrDragToMoveStories from './stories/basic-examples/ClickOrDragToMove.stories';
+import * as SelectableSparePiecesStories from './stories/basic-examples/SelectableSparePieces.stories';
 
 <Meta title="How to use/Basic examples" />
 
@@ -30,6 +31,8 @@ These examples demonstrate basic and common use cases for React Chessboard. Each
 - [Spare pieces](#spare-pieces)
 - [Click to move](#click-to-move)
 - [Click or drag to move](#click-or-drag-to-move)
+- [Selectable spare pieces](#selectable-spare-pieces)
+- [Empty board with spare pieces](#empty-board-with-spare-pieces)
 
 ### Default chessboard component
 
@@ -73,6 +76,20 @@ This example shows how to use the `onSquareClick` prop to handle square clicks. 
 This example shows how to use the `onSquareClick` prop in tandem with the `onPieceDrop` prop to handle square click movement as well as drag movement.
 
 <Canvas of={ClickOrDragToMoveStories.ClickOrDragToMove} />
+
+### Selectable spare pieces
+
+This example extends the spare pieces pattern by adding click-to-select behaviour. Clicking a spare piece selects it (shown with a highlighted border), and then clicking any square on the board places that piece. The piece stays selected so you can place multiple copies — click it again or click a different piece to change selection. Drag-and-drop still works alongside selection.
+
+This utilises the new `isSelected`, `onSelect`, and `selectedStyle` props on the `SparePiece` component.
+
+<Canvas of={SelectableSparePiecesStories.SelectableSparePieces} />
+
+### Empty board with spare pieces
+
+Same selection behaviour as above, but starting from an empty board — useful for building positions from scratch.
+
+<Canvas of={SelectableSparePiecesStories.EmptyBoardWithSparePieces} />
 
 ## Continue reading
 

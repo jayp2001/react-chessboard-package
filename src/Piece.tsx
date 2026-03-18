@@ -94,7 +94,7 @@ export const Piece = memo(function Piece({
           : {}),
         width: '100%',
         height: '100%',
-        cursor: cursorStyle,
+        cursor: isSparePiece ? 'inherit' : cursorStyle,
         touchAction: 'none', // prevent zooming and scrolling on touch devices
       }}
       onClick={() =>
